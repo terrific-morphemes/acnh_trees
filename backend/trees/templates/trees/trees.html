@@ -1,0 +1,16 @@
+{% extends "trees/base.html" %}
+{% block content %}
+    <h2>Trees</h2>
+    <ol>
+    {% for tree in object_list %}
+        <li>
+            <p>Id: {{tree.id}}</p>
+            <p>Region: {{tree.region}}</p>
+            <p>Kind: {{tree.kind}}</p>
+            <p>Last harvest: {{tree.last_harvest}}</p>
+            <p>Last wasp: {{tree.last_wasp}}</p>
+            <p>Notes: {{tree.notes}}</p>
+        </li>
+    {% endfor %}
+    </ol>
+{% endblock %}
