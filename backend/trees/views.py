@@ -22,10 +22,11 @@ class RegionList(ListView):
 class TreeForm(forms.ModelForm):
     class Meta:
         model = Tree
-        fields = ['kind', 'region', 'last_harvest', 'last_wasp', 'notes']
+        fields = ['kind', 'region', 'last_harvest', 'last_chop', 'last_wasp', 'notes']
         widgets = {
             'last_wasp': forms.DateTimeInput(),
-            'last_harvest': forms.DateTimeInput,
+            'last_harvest': forms.DateTimeInput(),
+            'last_chop': forms.DateTimeInput()
         }
 
 
@@ -43,7 +44,7 @@ class RegionCreate(CreateView):
 
 class TreeUpdate(UpdateView):
     model = Tree
-    fields = ['kind', 'region', 'notes']
+    fields = ['kind', 'region', 'notes', 'last_chop', 'last_harvest', 'last_wasp']
     success_url="/tree/"
 
 

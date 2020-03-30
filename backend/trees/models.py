@@ -5,6 +5,7 @@ class Tree(models.Model):
     kind = models.CharField(max_length=20, default="unk")
     last_harvest = models.DateTimeField(null=True)
     last_wasp = models.DateTimeField(null=True)
+    last_chop = models.DateTimeField(null=True)
     notes = models.TextField(null=True)
     region = models.ForeignKey('Region', on_delete=models.CASCADE)
     
