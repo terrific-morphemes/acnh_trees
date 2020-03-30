@@ -1,3 +1,5 @@
 virtualenv/
 __pycache__
 backend/trees/migrations/
+*.swp
+.DS_STORE
